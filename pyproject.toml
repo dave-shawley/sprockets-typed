@@ -3,16 +3,27 @@ name = "sprockets-typed"
 version = "0.0.0"
 description = "Add your description here"
 readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
 authors = [{ name = "Dave Shawley", email = "daveshawley@gmail.com" }]
 requires-python = ">=3.12"
 dependencies = ["pydantic~=2.11", "tornado~=6.4"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Typing :: Typed",
+]
 
 [project.scripts]
 sprockets-typed = "sprockets_typed:main"
 
 [build-system]
-requires = ["uv_build>=0.8.13,<0.9.0"]
-build-backend = "uv_build"
+requires = ["hatchling~=1.27.0"]
+build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
