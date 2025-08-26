@@ -88,14 +88,14 @@ class TypedRequestHandler(web.RequestHandler):
         incompatible with the specified type.
 
         Args:
-            body_cls (type[T]): The target class type to which the body
-                should be validated. Can be a subclass of pydantic.BaseModel
-                or any other type.
+            body_cls: The target class type to which the body
+                should be validated. Can be a subclass of
+                [pydantic.BaseModel][] or any other type.
 
         Returns:
-            T | None: The deserialized and validated request body of the
-                specified type, or None if the target class type is NoneType
-                and the body is empty.
+            The deserialized and validated request body of the specified
+                type, or None if the target class type is NoneType and
+                the body is empty.
 
         Raises:
             RequestValidationError: If the body cannot be deserialized,

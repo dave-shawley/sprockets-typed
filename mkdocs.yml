@@ -1,0 +1,55 @@
+site_name: sprockets-typed
+repo_name: "dave-shawley/sprockets-typed"
+repo_url: "https://github.com/dave-shawley/sprockets-typed"
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - search_suggest
+    - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+extra_css:
+  - css/mkdocstrings.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      base_path:
+        - docs
+        - .
+  - pymdownx.superfences
+  - sane_lists
+  - toc:
+      permalink: true
+
+nav:
+  - index.md
+  - reference.md
+  - changelog.md
+
+plugins:
+  - mkdocstrings:
+      default_handler: python_xref
+      enable_inventory: true
+      handlers:
+        python_xref:
+          inventories:
+            - "https://docs.pydantic.dev/latest/objects.inv"
+            - "https://docs.python.org/3/objects.inv"
+            - "https://www.tornadoweb.org/en/stable/objects.inv"
+          options:
+            docstring_section_style: "list"
+            docstring_style: "google"
+            relative_crossrefs: true
+            show_labels: true
+            show_root_full_path: true
+            show_root_heading: true
+            show_root_toc_entry: true
+            show_signature: false
+            show_source: false
+            unwrap_annotated: true
+  - search

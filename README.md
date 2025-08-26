@@ -1,5 +1,3 @@
-> Helpers for writing typesafe Tornado handlers.
-
 Static type analysis is a great way to catch bugs. It is also a great way to inform editors, AI assistants, and other
 tools about the contracts within your code. This library started out as a way to improve the docuemntation of Tornado
 web applications with hopes of being able to keep OpenAPI specifications up to date in addition to providing type
