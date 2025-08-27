@@ -4,5 +4,4 @@
 !/.pre-commit-config.yaml
 /build
 /dist
-/uv.lock
 *.pyc

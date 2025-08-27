@@ -151,7 +151,7 @@ class GetRequestAsTests(unittest.TestCase):
 
     def test_that_get_request_body_is_called(self) -> None:
         handler = create_request_handler()
-        handler.get_request_body = mock.Mock(return_value={'foo': 'bar'})
+        handler.get_request_body = mock.Mock(return_value={'foo': 'bar'})  # type: ignore[attr-defined]
         result = handler.get_request_as(dict)
         self.assertEqual({'foo': 'bar'}, result)
-        handler.get_request_body.assert_called_once()
+        handler.get_request_body.assert_called_once()  # type: ignore[attr-defined]
